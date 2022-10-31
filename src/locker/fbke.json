@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "thevenustv-69386",
+  "private_key_id": "1b87e270db27419dffe45700a6034b10598d8b37",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCfO93ffaM0lce4\nhQF2dguLRi2lp5NJNk5zlKinFkggRjrOmKhatWqK/aW4FuCM9VG5RAh3tkC0U7HB\n2xNLtRqBfqN6MEgrwI1Dc8KGxx1uxIGFRMTwom4E75YzZus+K0tpAzA77lK14Bsm\n0wUhwUq8N9WARzkYJqZebdhy7hPMHmrdQLg2TRrAukvn1ZjdKTg5C711XkdD/oyl\nmoWqzwzHVUzEyqJGJWy0290ETeQruYBvrGrhXJp0B535Kr0lRmf+6FRSU4tsDIV9\n3assITIwDH1u5RfIWeBoXJcKooiiJXkMQgpdGSFr7IEeQW6DooSRa8TBFih7FWAW\nCPMbM4XtAgMBAAECggEACLoPeCDq2aYuzrRNZvhjvBORy18igZPuG0QFtTiRpeEr\ndmij62q/ZtQtaagpUNheDP0HSMZOiAOBPbpbtZ28kOXHoFn2jp1MMKruuZO+j3RK\nE+t3rqd8R5142iLVGDBnvt7bnSE727dnTYqpoJa3GZcmxpPAs4vkuM6k2vGk2J4p\nAVH0ZcMT2kx3SBLqsUmkQvge11MioaYt3ZJQSXfOu88znzQqDRPCXOlU3ORSz4ec\naZlWcc4/+gkW9riAb8DLZmE3VFdqeSMlLti1gWpKC3Pts54QI4KFviv5J1xS6l8d\nS2z+K2MCVyz8wlDYeNPAeJQ5EQx8i2BagQ2qkzL++QKBgQDQeqGTR6IM77wJLCU0\nWN+siBwnVd46BFH8Br7I/zmTJG1q52slHmC3h3UziykfBce7Gq7sszgpGAYDj4c2\nPoriFa1JBGyWgxoP6Fi2dSqoY0E54mPfT46rvJYqzJgxhVt4hkk6RaqtiPt41Rq/\nVE/txDsdPYwh6uz321r3VTjsRQKBgQDDh6I/PCUxP6RTDVr8ozJTEtJpvaRehFe6\nvmJwHoZnb2okKB6X2SX72gONm1eTCPD5HaC1UZHYxq56uhMPbVp9Zi8uC+cBajHj\neNbOrlFc04yVtQqDNzpE2rGkFHQOZgoMUP6Y3McVhhVMQoz+//r9RUYP26qOR4lU\nwpZ9SeKRiQJ/VlJwlIsUjka1lRayUPp7ovS4s5DacytWxwQD+zWyoTp0E8++jaAG\na/eqj60PWckK6m4h/+A1YM6Rrue/FLbQyswu9Azg6XFfWTbbhLD++LogR9d1gwFu\nEa4Ef7Q3UEnnlgAEUhyGj1Qoy99xM8e1UL3vvCu/2ktr0zUAdWjUKQKBgQC/R0CB\ne+UmeIvYc4g+/aeNfSw6JTtW+0CXfwfthu8U4PmExXqoMdXmuzAep4jUXjreeQ1u\nU43J8xNdHArpXKDZa81bzmj+CVUkomIBbqZJmOo+ygyusKhgE1EUoq2mKExMIC/w\neoqHk9Ph9njYPLLccZhIiyweY/0E3hc6Gb17gQKBgQDIo2ltS/7/ObHoJ8mb3XDY\nELeCXeC/Yw9qi8QykhDjzWbMyv5VQU28yZS85Yhx6C9y/z8wII2GDLX8JWfZ0BcE\nNGMOsFX/kSsKSX/XLM3egdAo7RBBqbkA8h5RC/feP5imgd+nMnhoqvaI3WwxfUMo\nX6sW75FUgsf0YXayqMuANA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-k0vxs@thevenustv-69386.iam.gserviceaccount.com",
+  "client_id": "103137876031117626038",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-k0vxs%40thevenustv-69386.iam.gserviceaccount.com"
+}
