@@ -53,17 +53,17 @@ const voiceSender = (message, music_file) => {
 
   console.log(connection);
 
-  const subscription = connection.subscribe(player);
+  /*const subscription = connection.subscribe(player);
   player.play(resource);
 
   player.on(AudioPlayerStatus.Idle, () => {
     player.stop();
     subscription.unsubscribe();
     connection.destroy();
-  });
+  });*/
 }
 
-client.on('message', async (message) => {
+client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
   if (Object.keys(voice_messages).includes(message.content)) {
