@@ -51,6 +51,8 @@ const voiceSender = (message, music_file) => {
     adapterCreator: message.guild.voiceAdapterCreator
   });
 
+  console.log(connection);
+
   const subscription = connection.subscribe(player);
   player.play(resource);
 
