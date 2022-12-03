@@ -9,6 +9,7 @@
     "start": "node ."
   },
   "dependencies": {
+    "@discordjs/voice": "^0.14.0",
     "discord.js": "^13.6.0"
   },
   "devDependencies": {

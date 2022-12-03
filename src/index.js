@@ -1,4 +1,5 @@
 const { Client, Intents } = require('discord.js');
+const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require("@discordjs/voice");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -41,17 +42,23 @@ const voiceSender = (message, music_file) => {
     return;
   }
 
-  console.log(voiceChannel)
+  const player = createAudioPlayer();
+  const resource = createAudioResource(music_file);
 
-  voiceChannel.join()
-    .then(connection => {
-      const dispatcher = connection.play(music_file);
-      dispatcher.on("finish", () => connection.disconnect());
-    })
-    .catch(err => {
-      console.log(err);
-      voiceChannel.leave();
-    });
+  const connection = joinVoiceChannel({
+    channelId: voiceChannel,
+    guildId: message.guild.id,
+    adapterCreator: message.guild.voiceAdapterCreator
+  });
+
+  const subscription = connection.subscribe(player);
+  player.play(resource);
+
+  player.on(AudioPlayerStatus.Idle, () => {
+    player.stop();
+    subscription.unsubscribe();
+    connection.destroy();
+  });
 }
 
 client.on('message', async (message) => {
