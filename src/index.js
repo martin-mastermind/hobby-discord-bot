@@ -1,7 +1,12 @@
 const { Client, Intents } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus  } = require("@discordjs/voice");
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES ] });
+const client = new Client({intents: [
+  Intents.FLAGS.GUILDS,
+  Intents.FLAGS.GUILD_MESSAGES,
+  Intents.FLAGS.GUILD_VOICE_STATES, 
+  Intents.FLAGS.GUILD_PRESENCES
+]});
 
 client.on('ready', () => {
   client.user.setActivity("Смотрим главную котейку сервера", {
@@ -42,31 +47,23 @@ const voiceSender = (message, music_file) => {
     return;
   }
 
-  const player = createAudioPlayer();
-  const resource = createAudioResource(music_file);
-
   const connection = joinVoiceChannel({
     channelId: voiceChannel,
     guildId: message.guild.id,
     adapterCreator: message.guild.voiceAdapterCreator
   });
 
-  connection.on(VoiceConnectionStatus.Signalling, () => {
-    console.log('signal');
-  });
+  let audioPlayer = createAudioPlayer();
+  connection.subscribe(audioPlayer);
 
-  connection.on(VoiceConnectionStatus.Connecting, () => {
-    console.log('connecting');
-  });
+  console.log(getVoiceConnections())
+  const resource = createAudioResource(music_file)
+  audioPlayer.play(resource)
 
-  /*const subscription = connection.subscribe(player);
-  player.play(resource);
-
-  player.on(AudioPlayerStatus.Idle, () => {
-    player.stop();
-    subscription.unsubscribe();
+  audioPlayer.on(AudioPlayerStatus.Idle, () => {
+    audioPlayer.stop();
     connection.destroy();
-  });*/
+  });
 }
 
 client.on('messageCreate', async (message) => {
