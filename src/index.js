@@ -1,5 +1,5 @@
 const { Client, Intents } = require('discord.js');
-const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus  } = require("@discordjs/voice");
+const { joinVoiceChannel, createAudioPlayer, createAudioResource, getVoiceConnections, AudioPlayerStatus } = require("@discordjs/voice");
 
 const client = new Client({intents: [
   Intents.FLAGS.GUILDS,
