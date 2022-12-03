@@ -1,7 +1,7 @@
-const { Client, Intents } = require('discord.js');
+const { Client, Intents, GatewayIntentBits } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require("@discordjs/voice");
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, GatewayIntentBits.GuildVoiceStates ] });
 
 client.on('ready', () => {
   client.user.setActivity("Смотрим главную котейку сервера", {
