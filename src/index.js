@@ -1,5 +1,5 @@
 const { Client, Intents } = require('discord.js');
-const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require("@discordjs/voice");
+const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus  } = require("@discordjs/voice");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES ] });
 
@@ -51,7 +51,13 @@ const voiceSender = (message, music_file) => {
     adapterCreator: message.guild.voiceAdapterCreator
   });
 
-  console.log(connection);
+  connection.on(VoiceConnectionStatus.Signalling, () => {
+    console.log('signal');
+  });
+
+  connection.on(VoiceConnectionStatus.Connecting, () => {
+    console.log('connecting');
+  });
 
   /*const subscription = connection.subscribe(player);
   player.play(resource);
