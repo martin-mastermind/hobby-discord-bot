@@ -41,6 +41,8 @@ const voiceSender = (message, music_file) => {
     return;
   }
 
+  console.log(voiceChannel)
+
   voiceChannel.join()
     .then(connection => {
       const dispatcher = connection.play(music_file);
