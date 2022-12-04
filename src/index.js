@@ -43,7 +43,7 @@ const voiceSender = (message, music_file) => {
 
   voiceChannel.join()
     .then(connection => {
-      const dispatcher = connection.play(music_file);
+      const dispatcher = connection.play(require("path").join(__dirname, music_file));
       dispatcher.on("finish", () => connection.disconnect());
     })
     .catch(err => {
